@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\StudentController;
 
 
 
@@ -24,3 +25,6 @@ Route::post('/movies', [MovieController::class, 'store']);    // save new movie
 Route::get('/books', [BookController::class, 'index'])->name('books.index');
 Route::get('/books/create', [BookController::class, 'create'])->name('books.create');
 Route::post('/books', [BookController::class, 'store'])->name('books.store');
+
+//student task 
+Route::resource('students', StudentController::class);
