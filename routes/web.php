@@ -5,6 +5,7 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\NoteController;
 
 
 
@@ -28,3 +29,6 @@ Route::post('/books', [BookController::class, 'store'])->name('books.store');
 
 //student task 
 Route::resource('students', StudentController::class);
+//notee task 
+
+Route::resource('notes', NoteController::class);
